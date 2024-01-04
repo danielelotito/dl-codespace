@@ -29,7 +29,7 @@ const Home = ({ name, title }) => (
     <img className="background"
          src={image}
          alt=""
-         style={{ position: "absolute", top: "5rem", right: "2rem", width: "80rem" }}
+         style={{ position: "absolute", top: "5rem", right: "2rem", width: "280rem" }}
     />
     <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "17rem" }}>
       <h1>{name}</h1>
