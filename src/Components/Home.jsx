@@ -33,7 +33,7 @@ const Home = ({ name, title }) => (
                   top: "0",
                   left: "18rem", 
                   width: "100%",
-                  height: "100%",
+                  height: "120%",
                   objectFit: "cover",
                   objectPosition: "right",
                   transform: "scale(1.1)"}}
