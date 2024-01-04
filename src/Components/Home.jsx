@@ -23,23 +23,32 @@ import PropTypes from "prop-types";
 import image from "../images/DanieleLotito.jpeg";
 const imageAltText = "Daniele Lotito profile of mails and LinkedIn";
 
-
 const Home = ({ name, title }) => (
-  <section id="home" className="min-height" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-    <div style={{ flex: "1", padding: "2rem" }}>
-      <h1>{name}</h1>
-      <h2>{title}</h2>
-    </div>
+  <section id="home" className="min-height" style={{ position: "relative", overflow: "hidden" }}>
     <img className="background"
          src={image}
          alt=""
-         style={{ flex: "1", width: "100%", objectFit: "cover", objectPosition: "right", transform: "scale(1)" }} 
+         style= {{
+           position: "absolute",
+           top: 0,
+           left: 0,
+           width: "100%",
+           height: "auto",
+           objectFit: "cover",
+           transform: "scale(1.1)"
+         }}
     />
-    <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
+    <div style={{ position: "absolute", top: "20%", left: "5%", width: "90%", textAlign: "center" }}>
+      <h1>{name}</h1>
+      <h2>{title}</h2>
+    </div>
+    <div style={{ position: "absolute", bottom: "5%", left: "50%", transform: "translateX(-50%)" }}>
       <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
     </div>
   </section>
-)
+);
+
+
 Home.defaultProps = {
   name: "",
   title: "",
