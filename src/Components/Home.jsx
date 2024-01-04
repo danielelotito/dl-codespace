@@ -21,8 +21,7 @@ import PropTypes from "prop-types";
  * freely use on your site.
  */
 import image from "../images/DanieleLotito.jpeg";
-const imageAltText = "Daniele Lotito profile of mails and LinkedIn";
-const Home = ({ name, title }) => (
+const imageAltText = "Daniele Lotito profile of mails and LinkedIn";const Home = ({ name, title }) => (
   <section id="home" className="min-height" style={{ position: "relative", overflow: "hidden" }}>
     <img className="background"
          src={image}
@@ -30,19 +29,33 @@ const Home = ({ name, title }) => (
          style= {{
            position: "absolute",
            top: 0,
-           left: 0, // Keep the image starting from the left
-           width: "100%", // 2/3 of the screen width
-           height: "auto",
+           left: "25%", // Adjusted to occupy the right 2/3 of the screen
+           width: "75%", // Increased width to fill 2/3 of the screen from the left position
+           height: "100%", // Full height to prevent cutting off the image
            objectFit: "contain",
-           transform: "scale(1.1)"
-         }}
+           objectPosition: "left top" // Adjusted to align the image to the left top
+      }}
     />
-    <div style={{ position: "absolute", top: "20%", left: "5%", width: "30%", textAlign: "left" }}>
-      <h1>{name}</h1>
-      <h2>{title}</h2>
+    <div style={{ 
+         position: "absolute", 
+         top: "20%", 
+         left: "5%", 
+         width: "20%", // Reduced width to maintain proportion and avoid overlapping
+         textAlign: "left" 
+      }}>
+      <h1 style={{ margin: "0.5em 0" }}>{name}</h1>
+      <h2 style={{ margin: "0.5em 0" }}>{title}</h2> 
     </div>
-    <div style={{ position: "absolute", bottom: "5%", left: "50%", transform: "translateX(-50%)" }}>
-      <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+    <div style={{ 
+         position: "absolute", 
+         bottom: "5%", 
+         left: "50%", 
+         transform: "translateX(-50%)" 
+      }}>
+      <img src={arrowSvg} 
+           style={{ height: "3rem", width: "3rem" }} 
+           alt={imageAltText} 
+      />
     </div>
   </section>
 );
