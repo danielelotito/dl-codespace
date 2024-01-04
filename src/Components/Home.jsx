@@ -23,11 +23,12 @@ import PropTypes from "prop-types";
 import image from "../images/DanieleLotito.jpeg";
 const imageAltText = "Daniele Lotito profile of mails and LinkedIn";
 
+/* make the photo appear on the right*/
 const Home = ({ name, title }) => {
   return (
     <section id="home" className="min-height">
       <img className="background" src={image} alt="" />
-      <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "7rem" }}>
+      <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "2rem" }}>
         <h1>{name}</h1>
         <h2>{title}</h2>
       </div>
