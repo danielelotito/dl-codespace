@@ -18,10 +18,11 @@ import React from "react";
  *
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
+ * import image from "../images/design-desk.jpeg";
+ * const imageAltText = "desktop with books and laptop";
  */
-import image from "../images/design-desk.jpeg";
-
-const imageAltText = "desktop with books and laptop";
+import image from "../images/white.jpg";
+const imageAltText = "white striped background";
 
 /**
  * Project list
@@ -31,28 +32,21 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "Statistical mechanics of dense hebbian networks",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "Paper published on the Journal of Physics A: Statistical Physics and its application. It discusses how high order interactions impact Hopfield networks.",
+    url: "https://www.sciencedirect.com/science/article/abs/pii/S0378437123006313",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Training dense hebbian networks with no supervision",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+    "Paper published on the Journal of Physics A: Statistical Physics and its application. Here we develop a framework that allows to learn with a dense hebbian network in the unsupervised setting.",
+    url: "https://www.sciencedirect.com/science/article/abs/pii/S0378437123006982",
   },
   {
-    title: "My Resume Site",
-    description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
-  },
-  {
-    title: "GitHub Codespaces and github.dev",
-    description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+    title: "My Google Scholar profile",
+    description: "Check out my Google Scholar profile to see my publications.",
+    url: "https://scholar.google.com/citations?user=hbCDbioAAAAJ&hl=en",
   },
 ];
 

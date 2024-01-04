@@ -15,28 +15,35 @@ import React from "react";
  *
  * Need an image? Check out https://unsplash.com to download a image you
  * freely use on your site.
- */
 import image from "../images/motion-background.jpg";
-
 const imageAltText = "purple and blue abstract background";
+ */
 
+import image from "../images/background-graph-skyblue-whiteatthecenter.jpg.jpg";
+const imageAltText = "Graph with sky blue background and white at the center";
 /**
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+  "I'm a PhD candidate in AI at University of Pisa. I am specialized in the contribution of statistical physics and statistical learning theory to machine learning. I apply the theoretical results to the analysis of the generalization properties of deep feed-forward neural networks. I am also interested in the application of high dimensional statistics to the analysis of the dynamics of complex systems such as biological systems and the stock market. ";
 
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */
 const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
+  "Python",
+  "Pytorch",
+  "Tensorflow",
+  "Scikit-learn",
+  "R",
+  "Git",
+  "LaTeX",
+  "Julia",
+  "Feed-forward neural networks",
+  "Statistical physics",
+  "Statistical learning theory",
+  "Attention based models",
 ];
 
 /**
@@ -45,7 +52,7 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
+  "Affiliated with the Italian Advanced Mathematics Institute (INDAM) and the Italian National Institute for Nuclear Physics (INFN).";
 
 const About = () => {
   return (
