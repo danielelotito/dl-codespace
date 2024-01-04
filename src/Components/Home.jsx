@@ -23,25 +23,18 @@ import PropTypes from "prop-types";
 import image from "../images/DanieleLotito.jpeg";
 const imageAltText = "Daniele Lotito profile of mails and LinkedIn";
 
-/* make the photo appear on the right*/
+
 const Home = ({ name, title }) => (
-  <section id="home" className="min-height">
-    <img className="background"
-         src={image}
-         alt=""
-         style= {{position: "absolute",
-                  top: "0",
-                  left: "18rem", 
-                  width: "100%",
-                  height: "120%",
-                  objectFit: "cover",
-                  objectPosition: "right",
-                  transform: "scale(1.1)"}}
-    />
-    <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "17rem" }}>
+  <section id="home" className="min-height" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
+    <div style={{ flex: "1", padding: "2rem" }}>
       <h1>{name}</h1>
       <h2>{title}</h2>
     </div>
+    <img className="background"
+         src={image}
+         alt=""
+         style={{ flex: "1", objectFit: "cover", objectPosition: "right", transform: "scale(1.1)" }} 
+    />
     <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
       <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
     </div>
