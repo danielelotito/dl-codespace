@@ -31,8 +31,7 @@ const Home = ({ name, title }) => (
          alt=""
          style= {{position: "absolute",
                   top: "0",
-                  left: "0",
-                  right: "1rem", 
+                  left: "18rem", 
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
