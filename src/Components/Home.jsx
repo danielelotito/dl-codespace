@@ -30,7 +30,7 @@ const Home = ({ name, title }) => (
          alt=""
          style= {{
            position: "absolute",
-           right: 0, // Align to the right
+           left: 0, // Align to the right
            bottom: 0, // Align to the bottom
            maxHeight: '100vh', // Max height is the full viewport height
            maxWidth: '100%', // Max width is the full width of its container
