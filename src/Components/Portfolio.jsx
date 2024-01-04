@@ -51,7 +51,7 @@ const projectList = [
   {
     title: "Explaining complex systems to a broad audience in italian",
     description: "Publication on the Italian online magazine Rivolta La Carta.",
-    url: "https://www.rivoltalacarta.it/la-natura-complessa-degli-stormi/",
+    url: "https://www.rivoltalacarta.it/la-natura-complessa-degli-stormi",
   },
 ];
 
