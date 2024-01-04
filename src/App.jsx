@@ -25,7 +25,7 @@ import "./styles.css";
  */
 const siteProps = {
   name: "Daniele Lotito",
-  title: "Theoretical Physicist, PhD in Artificial Intelligence",
+  title: "Theoretical Physicist, PhD in AI",
   email: "daniele.lotito@phd.unipi",
   gitHub: "danielelotito",
   linkedIn: "daniele-lotito",
