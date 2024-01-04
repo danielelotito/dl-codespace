@@ -22,7 +22,6 @@ import PropTypes from "prop-types";
  */
 import image from "../images/DanieleLotito.jpeg";
 const imageAltText = "Daniele Lotito profile of mails and LinkedIn";
-
 const Home = ({ name, title }) => (
   <section id="home" className="min-height" style={{ position: "relative", overflow: "hidden" }}>
     <img className="background"
@@ -31,14 +30,14 @@ const Home = ({ name, title }) => (
          style= {{
            position: "absolute",
            top: 0,
-           left: 0,
-           width: "100%",
+           left: 0, // Keep the image starting from the left
+           width: "100%", // 2/3 of the screen width
            height: "auto",
-           objectFit: "cover",
+           objectFit: "contain",
            transform: "scale(1.1)"
          }}
     />
-    <div style={{ position: "absolute", top: "20%", left: "5%", width: "90%", textAlign: "center" }}>
+    <div style={{ position: "absolute", top: "20%", left: "5%", width: "30%", textAlign: "left" }}>
       <h1>{name}</h1>
       <h2>{title}</h2>
     </div>
