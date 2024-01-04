@@ -33,14 +33,13 @@ const Home = ({ name, title }) => (
     <img className="background"
          src={image}
          alt=""
-         style={{ flex: "3", objectFit: "contain", objectPosition: "right", transform: "scale(1)" }} 
+         style={{ flex: "1", width: "100%", objectFit: "contain", objectPosition: "right", transform: "scale(1)" }} 
     />
     <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
       <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
     </div>
   </section>
-);
-
+)
 Home.defaultProps = {
   name: "",
   title: "",
