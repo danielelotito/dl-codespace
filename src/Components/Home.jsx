@@ -29,16 +29,15 @@ const Home = ({ name, title }) => (
     <img className="background"
          src={image}
          alt=""
-         style={{ 
-          position: "absolute",
-          top: "0",
-          right: "2rem", // Add padding on the right
-          width: "calc(100% - 2rem)", // Subtract the padding from the width
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "right",
-          transform: "scale(1.1)" // Zoom the image a little bit
-        }}
+         style= {{position: "absolute",
+                  top: "0",
+                  left: "0",
+                  right: "2rem", 
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "right",
+                  transform: "scale(1.1)"}}
     />
     <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "17rem" }}>
       <h1>{name}</h1>
