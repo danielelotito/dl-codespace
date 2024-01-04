@@ -21,7 +21,6 @@ import PropTypes from "prop-types";
  * freely use on your site.
  */
 import image from "../images/DanieleLotito.jpeg";
-
 const imageAltText = "Daniele Lotito profile of mails and LinkedIn";
 
 const Home = ({ name, title }) => {
