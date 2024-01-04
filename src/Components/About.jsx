@@ -19,7 +19,7 @@ import image from "../images/motion-background.jpg";
 const imageAltText = "purple and blue abstract background";
  */
 
-import image from "../images/background-graph-skyblue-whiteatthecenter.jpg.jpg";
+import image from "../images/background-graph-skyblue-whiteatthecenter.jpg";
 const imageAltText = "Graph with sky blue background and white at the center";
 /**
  * Sort description that expands on your title on the Home component.
