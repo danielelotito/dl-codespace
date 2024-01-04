@@ -48,6 +48,11 @@ const projectList = [
     description: "Check out my Google Scholar profile to see my publications.",
     url: "https://scholar.google.com/citations?user=hbCDbioAAAAJ&hl=en",
   },
+  {
+    title: "Explaining complex systems to a broad audience in italian",
+    description: "Publication on the Italian online magazine Rivolta La Carta.",
+    url: "https://www.rivoltalacarta.it/la-natura-complessa-degli-stormi/",
+  },
 ];
 
 const Portfolio = () => {
