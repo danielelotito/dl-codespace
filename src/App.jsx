@@ -38,6 +38,11 @@ const siteConfig = {
     accent: "#F95738",
   },
   
+  // Feature toggles
+  features: {
+    showSkills: false, // Set to false to hide the skills section
+  },
+  
   // SEO and metadata
   seo: {
     title: "Daniele Lotito - Theoretical Physicist & AI Researcher",
@@ -151,7 +156,7 @@ const App = () => {
         {/* Main site structure */}
         <Header activeSection={activeSection} />
         <Home name={siteConfig.name} title={siteConfig.title} />
-        <About />
+        <About showSkills={siteConfig.features.showSkills} />
         <Publications />
         <Portfolio />
         <Education />
