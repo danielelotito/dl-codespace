@@ -5,11 +5,11 @@
  */
 
 import React, { useState, useEffect, createContext } from "react";
-import { createRoot } from "react-dom/client";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
+import Publications from "./Components/Publications";
 import Portfolio from "./Components/Portfolio";
 import Education from "./Components/Education";
 import "./styles.css";
@@ -67,7 +67,7 @@ const App = () => {
   // Monitor scroll position to update active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "portfolio", "education", "footer"];
+      const sections = ["home", "about", "publications", "portfolio","education", "footer"];
       const scrollPosition = window.scrollY + 100; // Offset for header
       
       for (const section of sections) {
@@ -129,7 +129,7 @@ const App = () => {
           </div>
         </div>
         
-        <style jsx>{`
+        <style>{`
           @keyframes spin {
             to { transform: rotate(360deg); }
           }
@@ -152,6 +152,7 @@ const App = () => {
         <Header activeSection={activeSection} />
         <Home name={siteConfig.name} title={siteConfig.title} />
         <About />
+        <Publications />
         <Portfolio />
         <Education />
         <Footer 

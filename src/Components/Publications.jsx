@@ -19,7 +19,7 @@ const Publications = () => {
       pages: "129143",
       doi: "10.1016/j.physa.2023.129143",
       url: "https://doi.org/10.1016/j.physa.2023.129143",
-      categories: ["Unsupervised Learning", "Statistical Physics", "Hebbian Networks"]
+      categories: ["Unsupervised Learning", "Statistical Physics", "Associative Networks", "Dense Networks"]
     },
     {
       title: "Dense Hebbian neural networks: A replica symmetric picture of supervised learning",
@@ -31,7 +31,7 @@ const Publications = () => {
       doi: "10.1016/j.physa.2023.129076",
       url: "https://doi.org/10.1016/j.physa.2023.129076",
       arxiv: "2211.14067",
-      categories: ["Supervised Learning", "Statistical Physics", "Hebbian Networks"]
+      categories: ["Supervised Learning", "Statistical Physics", "Associative Networks", "Dense Networks"]
     },
     {
       title: "Inverse modeling of time-delayed interactions via the Dynamic Entropy formalism",
@@ -42,7 +42,7 @@ const Publications = () => {
       pages: "024301",
       doi: "10.1103/PhysRevE.110.024301",
       url: "https://doi.org/10.1103/PhysRevE.110.024301",
-      categories: ["Entropy", "Time-delayed Systems", "Statistical Physics"]
+      categories: ["Maximum Entropy Methods", "Time-delayed Systems", "Statistical Physics", "Biological Systems"]
     },
     {
       title: "Learning in Associative Networks Through Pavlovian Dynamics",
@@ -52,7 +52,7 @@ const Publications = () => {
       year: "2024",
       pages: "1-33",
       doi: "10.1162/neco_a_01730",
-      url: "https://doi.org/10.1162/neco%7B%5C_%7D%01730",
+      url: "https://doi.org/10.1162/neco_a_01730",
       categories: ["Associative Networks", "Pavlovian Dynamics", "Neural Computation"]
     },
     {
@@ -64,7 +64,7 @@ const Publications = () => {
       pages: "",
       doi: "",
       url: "",
-      categories: ["Neural Learning", "Associative Networks", "Preprint"]
+      categories: ["Neural Learning", "Dynamical Systems", "Associative Networks", "Preprint"]
     }
   ];
 
