@@ -231,7 +231,7 @@ const About = ({ showSkills = true }) => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         @media (max-width: 768px) {
           section.padding {
             padding: 3rem 0;
