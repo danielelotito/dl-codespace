@@ -16,7 +16,7 @@ const imageAltText = "Graph with sky blue background and white at the center";
  * Description that expands on your title on the Home component.
  */
 const description =
-  "I'm a PhD candidate in AI at University of Pisa. I am specialized in the contribution of statistical physics and statistical learning theory to machine learning. I apply the theoretical results to the analysis of the generalization properties of deep feed-forward neural networks. I am also interested in the application of high dimensional statistics to the analysis of the dynamics of complex systems such as biological systems and the stock market.";
+  "I'm a PhD candidate in AI at University of Pisa.\n\nI am specialized in applying statistical physics and statistical learning theory to machine learning. .\n\nI am also interested in the application of high dimensional statistics to the analysis of the dynamics of complex systems such as biological systems and the stock market. \n\n My work lies at the intersection of theoretical physics, statistics, and machine learning, with hands-on experience in large machine learning models.";
 
 /**
  * List of skills or technologies you work on or are passionate about
@@ -39,13 +39,13 @@ const skillsList = [
     skills: ["Git", "Data Visualization", "Scientific Research", "Academic Publishing"]
   },
 ];
-
+*/
 /**
  * Additional information about what you are passionate about,
  * how you best work, or even a quote.
  */
 const detailOrQuote =
-  "Affiliated with the Italian Advanced Mathematics Institute (INDAM) and the Italian National Institute for Nuclear Physics (INFN).";
+  "Currently affiliated with IBM Research Europe. Formerly affiliated with University of Pisa, the Italian Advanced Mathematics Institute (INDAM) and the Italian National Institute for Nuclear Physics (INFN).";
 
 const About = () => {
   return (
