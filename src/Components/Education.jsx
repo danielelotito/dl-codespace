@@ -7,18 +7,18 @@ const Education = () => {
     {
       institution: "University of Pisa",
       degree: "National PhD in Artificial Intelligence",
-      period: "2021-2024",
-      highlights: "110/110 cum Laude",
-      description: "Specialized in statistical physics applications to machine learning. Affiliated with the Italian Advanced Mathematics Institute (INDAM) and the Italian National Institute for Nuclear Physics (INFN).",
-      skills: ["Deep Learning", "Statistical Learning Theory", "Neural Networks", "Research"]
+      period: "2021-2025",
+      highlights: "Only defense left",
+      description: "Specialized in statistical physics applications to machine learning. My scholarship was co-founded by the Italian Advanced Mathematics Institute (INDAM) and by the National Research Council of Italy (CNR)",
+      skills: ["Statistical Mechanics of Discrete Systems", "Statistical Learning Theory", "Associative Neural Networks", "Hebbian Learning"]
     },
     {
       institution: "École normale supérieure",
       degree: "Visiting Research Scholar",
       period: "2021",
-      highlights: "Research Exchange",
-      description: "Conducted thesis research at the prestigious Institut Curie, focusing on applications of statistical physics to biological systems.",
-      skills: ["International Research", "Collaborative Projects", "Biological Systems Modeling"]
+      highlights: "Research Visiting Period",
+      description: "Conducted thesis research at the Institut Curie, focusing on applications of statistical physics to biological systems.",
+      skills: ["Statistichal Mechanics of self-propelled particles", "Biological Systems Modeling", "Inverse Probems", "Maximum entropy methods"]
     },
     {
       institution: "University of Salento",
@@ -26,7 +26,7 @@ const Education = () => {
       period: "2019-2021",
       highlights: "110/110 cum Laude",
       description: "Focused on theoretical physics with applications to complex systems and statistical mechanics.",
-      skills: ["Complex Systems Analysis", "Advanced Mathematics", "Theoretical Modeling"]
+      skills: ["Complex Systems", "Scientific Computing", "Statistical Mechanics", "Theoretical Physics"]
     },
     {
       institution: "University of Salento",
@@ -34,7 +34,7 @@ const Education = () => {
       period: "2016-2019",
       highlights: "110/110 cum Laude",
       description: "Established strong foundations in physics, mathematics, and computational methods.",
-      skills: ["Mathematical Methods", "Physics", "Programming"]
+      skills: [ "Physics", "Scientific Computing", "Mathematical Methods"]
     },
     {
       institution: "Liceo Scientifico \"R. Nuzzi\", Andria(BT)",
@@ -93,8 +93,8 @@ const Education = () => {
         
         <div className="education-timeline">
           {educationItems.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="education-item"
               style={{
                 borderLeft: "3px solid #0D3B66",
@@ -107,6 +107,13 @@ const Education = () => {
                 transform: expandedIndex === index ? "translateX(10px)" : "none",
               }}
               onClick={() => toggleExpand(index)}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  toggleExpand(index);
+                }
+              }}
+              role="button"
+              tabIndex={0}
             >
               <div 
                 style={{
@@ -233,7 +240,7 @@ const Education = () => {
           ))}
         </div>
         
-        <style jsx>{`
+        <style>{`
           @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
