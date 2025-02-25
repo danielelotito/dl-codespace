@@ -8,48 +8,41 @@ import React from "react";
 
 /**
  * About background image
- *
- * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
- * represents what you see in that image.
- *
- * Need an image? Check out https://unsplash.com to download a image you
- * freely use on your site.
-import image from "../images/motion-background.jpg";
-const imageAltText = "purple and blue abstract background";
  */
-
 import image from "../images/background-graph-skyblue-whiteatthecenter.jpg";
 const imageAltText = "Graph with sky blue background and white at the center";
-/**
- * Sort description that expands on your title on the Home component.
- */
-const description =
-  "I'm a PhD candidate in AI at University of Pisa. I am specialized in the contribution of statistical physics and statistical learning theory to machine learning. I apply the theoretical results to the analysis of the generalization properties of deep feed-forward neural networks. I am also interested in the application of high dimensional statistics to the analysis of the dynamics of complex systems such as biological systems and the stock market. ";
 
 /**
- * List of some of skills or technologies you work on, are learning,
- * passionate about, or enjoy,
+ * Description that expands on your title on the Home component.
+ */
+const description =
+  "I'm a PhD candidate in AI at University of Pisa. I am specialized in the contribution of statistical physics and statistical learning theory to machine learning. I apply the theoretical results to the analysis of the generalization properties of deep feed-forward neural networks. I am also interested in the application of high dimensional statistics to the analysis of the dynamics of complex systems such as biological systems and the stock market.";
+
+/**
+ * List of skills or technologies you work on or are passionate about
  */
 const skillsList = [
-  "Python",
-  "Pytorch",
-  "Tensorflow",
-  "Scikit-learn",
-  "R",
-  "Git",
-  "LaTeX",
-  "Julia",
-  "Feed-forward neural networks",
-  "Statistical physics",
-  "Statistical learning theory",
-  "Attention based models",
+  {
+    category: "Programming Languages",
+    skills: ["Python", "R", "Julia", "LaTeX"]
+  },
+  {
+    category: "Machine Learning",
+    skills: ["Pytorch", "Tensorflow", "Scikit-learn"]
+  },
+  {
+    category: "Research Areas",
+    skills: ["Feed-forward neural networks", "Statistical physics", "Statistical learning theory", "Attention based models"]
+  },
+  {
+    category: "Tools & Practices",
+    skills: ["Git", "Data Visualization", "Scientific Research", "Academic Publishing"]
+  },
 ];
 
 /**
- * Use this to give more information about what you are passionate about,
- * how you best work, or even a quote. This will help someone learn more
- * about you on a professional level.
+ * Additional information about what you are passionate about,
+ * how you best work, or even a quote.
  */
 const detailOrQuote =
   "Affiliated with the Italian Advanced Mathematics Institute (INDAM) and the Italian National Institute for Nuclear Physics (INFN).";
@@ -58,34 +51,205 @@ const About = () => {
   return (
     <section className="padding" id="about">
       <img className="background" src={image} alt={imageAltText} />
-      <div
-        style={{
+      <div style={{
+        width: "100%",
+        maxWidth: "1200px",
+        margin: "0 auto",
+        padding: "0 20px",
+        position: "relative",
+        zIndex: 2
+      }}>
+        <div style={{
           backgroundColor: "white",
-          width: "50%",
-          padding: "4rem",
+          borderRadius: "12px",
+          boxShadow: "0 15px 35px rgba(0, 0, 0, 0.1)",
+          overflow: "hidden",
+          display: "flex",
+          flexDirection: "column",
           margin: "3rem auto",
-          textAlign: "center",
-        }}
-      >
-        <h2>About Myself</h2>
-        <p className="large">{description}</p>
-        <hr />
-        <ul
-          style={{
-            textAlign: "left",
-            columns: 2,
-            fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
-          }}
-        >
-          {skillsList.map((skill) => (
-            <li key={skill}>{skill}</li>
-          ))}
-        </ul>
-        <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        }}>
+          {/* Header section */}
+          <div style={{
+            background: "linear-gradient(135deg, #0D3B66 0%, #1a4f82 100%)",
+            padding: "2.5rem 3rem",
+            color: "white",
+            position: "relative"
+          }}>
+            <div style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              opacity: 0.05,
+              backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)",
+              backgroundSize: "15px 15px",
+            }}></div>
+            
+            <h2 style={{
+              fontSize: "2.5rem",
+              margin: 0,
+              position: "relative"
+            }}>About Myself</h2>
+            
+            <p style={{
+              fontSize: "1.1rem",
+              marginTop: "1rem",
+              lineHeight: 1.6,
+              maxWidth: "800px",
+              position: "relative"
+            }}>
+              {description}
+            </p>
+          </div>
+          
+          {/* Skills section */}
+          <div style={{
+            padding: "3rem",
+          }}>
+            <h3 style={{
+              color: "#0D3B66",
+              fontSize: "1.5rem",
+              marginTop: 0,
+              marginBottom: "1.5rem",
+              display: "flex",
+              alignItems: "center",
+              gap: "10px"
+            }}>
+              Skills & Expertise
+              <div style={{
+                height: "3px",
+                background: "#FAF0CA",
+                flex: 1,
+                borderRadius: "2px",
+                marginLeft: "10px"
+              }}></div>
+            </h3>
+            
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "30px",
+              marginBottom: "2.5rem"
+            }}>
+              {skillsList.map((skillGroup, groupIndex) => (
+                <div 
+                  key={groupIndex}
+                  style={{
+                    background: "#f8f8f8",
+                    borderRadius: "8px",
+                    padding: "1.5rem",
+                    border: "1px solid #eee"
+                  }}
+                >
+                  <h4 style={{
+                    color: "#0D3B66",
+                    marginTop: 0,
+                    marginBottom: "1rem",
+                    fontSize: "1.1rem"
+                  }}>
+                    {skillGroup.category}
+                  </h4>
+                  
+                  <div style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "10px"
+                  }}>
+                    {skillGroup.skills.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        style={{
+                          background: "white",
+                          color: "#0D3B66",
+                          padding: "6px 14px",
+                          borderRadius: "30px",
+                          fontSize: "0.9rem",
+                          border: "1px solid rgba(13, 59, 102, 0.2)",
+                          display: "inline-flex",
+                          alignItems: "center"
+                        }}
+                      >
+                        <span style={{
+                          display: "inline-block",
+                          width: "6px",
+                          height: "6px",
+                          borderRadius: "50%",
+                          background: "#0D3B66",
+                          marginRight: "8px"
+                        }}></span>
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Affiliations section */}
+            <div style={{
+              background: "rgba(250, 240, 202, 0.3)",
+              padding: "1.5rem 2rem",
+              borderRadius: "8px",
+              borderLeft: "4px solid #FAF0CA",
+              marginTop: "2rem"
+            }}>
+              <div style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "15px",
+                marginBottom: "0.5rem"
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style={{fill: "#0D3B66"}}>
+                  <path d="M12,1L3,5v6c0,5.55,3.84,10.74,9,12,5.16-1.26,9-6.45,9-12V5L12,1z M19,11c0,4.52-2.98,8.69-7,9.93 C7.98,19.69,5,15.52,5,11V6.3l7-3.11l7,3.11V11z M7.75,13L10,17l2-3l2,3l2.25-4L13,9.87L7.75,13z" />
+                </svg>
+                <h4 style={{
+                  margin: 0,
+                  color: "#0D3B66",
+                  fontSize: "1.2rem",
+                  fontWeight: "500"
+                }}>
+                  Academic Affiliations
+                </h4>
+              </div>
+              
+              <p style={{
+                margin: "0.5rem 0 0",
+                color: "#555",
+                fontSize: "1rem",
+                lineHeight: 1.6,
+                paddingLeft: "39px"
+              }}>
+                {detailOrQuote}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+      
+      <style jsx>{`
+        @media (max-width: 768px) {
+          section.padding {
+            padding: 3rem 0;
+          }
+          
+          div[style*="padding: 2.5rem 3rem"] {
+            padding: 2rem 1.5rem !important;
+          }
+          
+          div[style*="padding: 3rem"] {
+            padding: 2rem 1.5rem !important;
+          }
+          
+          h2[style*="fontSize: 2.5rem"] {
+            font-size: 2rem !important;
+          }
+          
+          div[style*="gridTemplateColumns"] {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };
