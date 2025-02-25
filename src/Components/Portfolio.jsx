@@ -1,25 +1,14 @@
 /**
  * Portfolio component
  *
- * Highlights some of  your creations. These can be designs, websites,
+ * Highlights some of your creations. These can be designs, websites,
  * open source contributions, articles you've written and more.
- *
- * This is a great area for you to to continually add to and refine
- * as you continue to learn and create.
  */
 
-import React from "react";
+import React, { useState } from "react";
 
 /**
- * Desk image
- *
- * Below is a sample desk image. Feel free to update this to an image of your choice,
- * updating below imageAltText to string that represents what you see in that image.
- *
- * Need an image? Check out https://unsplash.com to download a photo you
- * freely use on your site.
- * import image from "../images/design-desk.jpeg";
- * const imageAltText = "desktop with books and laptop";
+ * Background image for the portfolio section
  */
 import image from "../images/white2.jpg";
 const imageAltText = "white striped background";
@@ -27,8 +16,7 @@ const imageAltText = "white striped background";
 /**
  * Project list
  *
- * An array of objects that will be used to display for your project
- * links section. Below is a sample, update to reflect links you'd like to highlight.
+ * An array of objects that will be used to display project links
  */
 const projectList = [
   {
@@ -36,48 +24,183 @@ const projectList = [
     description:
       "Paper published on the Journal of Physics A: Statistical Physics and its application. It discusses how high order interactions impact Hopfield networks.",
     url: "https://www.sciencedirect.com/science/article/abs/pii/S0378437123006313",
+    tags: ["Statistical Physics", "Hopfield Networks", "Research Paper"]
   },
   {
     title: "Training dense hebbian networks with no supervision",
     description:
     "Paper published on the Journal of Physics A: Statistical Physics and its application. Here we develop a framework that allows to learn with a dense hebbian network in the unsupervised setting.",
     url: "https://www.sciencedirect.com/science/article/abs/pii/S0378437123006982",
+    tags: ["Unsupervised Learning", "Hebbian Networks", "Research Paper"]
   },
   {
     title: "My Google Scholar profile",
     description: "Check out my Google Scholar profile to see my publications.",
     url: "https://scholar.google.com/citations?user=hbCDbioAAAAJ&hl=en",
+    tags: ["Academic Profile", "Publications", "Research Impact"]
   },
   {
     title: "Explaining complex systems to a broad audience in italian",
     description: "Publication on the Italian online magazine Rivolta La Carta.",
     url: "https://www.rivoltalacarta.it/la-natura-complessa-degli-stormi",
+    tags: ["Science Communication", "Italian", "Complex Systems"]
   },
 ];
 
 const Portfolio = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
     <section className="padding" id="portfolio">
-      <h2 style={{ textAlign: "center" }}>Portfolio</h2>
-      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
-        <div style={{ maxWidth: "40%", alignSelf: "center" }}>
-          <img
-            src={image}
-            style={{ height: "90%", width: "100%", objectFit: "cover", animation: "1s ease-out 0s 1 slideInLeft" }}
-            alt={imageAltText}
-          />
-        </div>
-        <div className="container">
-          {projectList.map((project) => (
-            <div className="box" key={project.title}>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
-              </a>
-              <p className="small">{project.description}</p>
+      <div style={{ 
+        maxWidth: "1200px", 
+        margin: "0 auto",
+        padding: "0 20px"
+      }}>
+        <h2 style={{ 
+          textAlign: "center",
+          fontSize: "2.5rem",
+          color: "#0D3B66",
+          marginBottom: "1rem",
+          position: "relative"
+        }}>
+          Research Portfolio
+          <div style={{
+            position: "absolute",
+            width: "80px",
+            height: "4px",
+            backgroundColor: "#FAF0CA",
+            bottom: "-10px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            borderRadius: "2px"
+          }}></div>
+        </h2>
+        
+        <p style={{ 
+          textAlign: "center", 
+          maxWidth: "700px", 
+          margin: "0 auto 3rem",
+          color: "#666"
+        }}>
+          A collection of my published research papers and academic contributions in the fields of 
+          statistical physics, machine learning, and complex systems.
+        </p>
+
+        <div style={{ 
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+          gap: "30px",
+          marginTop: "40px"
+        }}>
+          {projectList.map((project, index) => (
+            <div 
+              key={project.title}
+              style={{
+                background: "white",
+                borderRadius: "12px",
+                boxShadow: hoveredIndex === index 
+                  ? "0 10px 30px rgba(13, 59, 102, 0.2)" 
+                  : "0 5px 15px rgba(0, 0, 0, 0.05)",
+                overflow: "hidden",
+                transition: "all 0.3s ease",
+                transform: hoveredIndex === index ? "translateY(-10px)" : "none",
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                position: "relative",
+                border: "1px solid #eee"
+              }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div style={{ padding: "25px", flex: 1, display: "flex", flexDirection: "column" }}>
+                <h3 style={{ 
+                  marginTop: 0,
+                  marginBottom: "15px",
+                  color: "#0D3B66",
+                  fontSize: "1.3rem",
+                  fontWeight: "600",
+                  lineHeight: "1.3"
+                }}>
+                  {project.title}
+                </h3>
+                
+                <p style={{ 
+                  fontSize: "0.95rem",
+                  lineHeight: "1.6",
+                  color: "#555",
+                  flex: 1,
+                  marginBottom: "20px"
+                }}>
+                  {project.description}
+                </p>
+                
+                <div style={{ 
+                  display: "flex", 
+                  flexWrap: "wrap", 
+                  gap: "8px",
+                  marginBottom: "20px" 
+                }}>
+                  {project.tags.map((tag, i) => (
+                    <span 
+                      key={i}
+                      style={{
+                        backgroundColor: "rgba(13, 59, 102, 0.08)",
+                        color: "#0D3B66",
+                        padding: "4px 10px",
+                        borderRadius: "15px",
+                        fontSize: "0.75rem",
+                        fontWeight: "500"
+                      }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                <a 
+                  href={project.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-block",
+                    background: "#0D3B66",
+                    color: "white",
+                    textDecoration: "none",
+                    padding: "10px 20px",
+                    borderRadius: "6px",
+                    fontWeight: "500",
+                    fontSize: "0.9rem",
+                    textAlign: "center",
+                    transition: "all 0.2s ease",
+                    marginTop: "auto"
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = "#1a4f82";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = "#0D3B66";
+                  }}
+                >
+                  View Publication
+                </a>
+              </div>
             </div>
           ))}
         </div>
       </div>
+      
+      <style jsx>{`
+        @media (max-width: 768px) {
+          section {
+            padding: 3rem 0;
+          }
+          h2 {
+            font-size: 2rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };
