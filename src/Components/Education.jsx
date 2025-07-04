@@ -7,10 +7,10 @@ const Education = () => {
     {
       institution: "University of Pisa",
       degree: "National PhD in Artificial Intelligence",
-      period: "2021-2024",
-      highlights: "110/110 cum Laude",
-      description: "Specialized in statistical physics applications to machine learning. Affiliated with the Italian Advanced Mathematics Institute (INDAM) and the Italian National Institute for Nuclear Physics (INFN).",
-      skills: ["Deep Learning", "Statistical Learning Theory", "Neural Networks", "Research"]
+      period: "2021-2025",
+      highlights: "Excellent with Honors",
+      description: "Specialized in mathematical physics applications to machine learning. My fellowship was co-founded by the Italian Advanced Mathematics Institute (INDAM) and the Italian National Research Council (CNR).",
+      skills: ["Deep Learning", "Statistical Learning Theory", "Neural Networks", "Mathematical Physics"]
     },
     {
       institution: "École normale supérieure",
