@@ -18,6 +18,7 @@ const Header = () => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Publications", href: "#publications" },
     { name: "Portfolio", href: "#portfolio" },
     { name: "Education", href: "#education" },
     { name: "Contact", href: "#footer" }
@@ -214,7 +215,7 @@ const Header = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         @media (max-width: 768px) {
           .desktop-nav {
             display: none;

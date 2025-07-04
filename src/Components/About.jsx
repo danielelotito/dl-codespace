@@ -16,7 +16,7 @@ const imageAltText = "Graph with sky blue background and white at the center";
  * Description that expands on your title on the Home component.
  */
 const description =
-  "I'm a PhD candidate in AI at University of Pisa. I am specialized in the contribution of statistical physics and statistical learning theory to machine learning. I apply the theoretical results to the analysis of the generalization properties of deep feed-forward neural networks. I am also interested in the application of high dimensional statistics to the analysis of the dynamics of complex systems such as biological systems and the stock market.";
+  "I'm a PhD candidate in AI at University of Pisa.\n\nI am specialized in applying statistical physics and statistical learning theory to machine learning. .\n\nI am also interested in the application of high dimensional statistics to the analysis of the dynamics of complex systems such as biological systems and the stock market. \n\n My work lies at the intersection of theoretical physics, statistics, and machine learning, with hands-on experience in large machine learning models.";
 
 /**
  * List of skills or technologies you work on or are passionate about
@@ -45,9 +45,9 @@ const skillsList = [
  * how you best work, or even a quote.
  */
 const detailOrQuote =
-  "Affiliated with the Italian Advanced Mathematics Institute (INDAM) and the Italian National Institute for Nuclear Physics (INFN).";
+  "Currently affiliated with IBM Research Europe. Formerly affiliated with University of Pisa, the Italian Advanced Mathematics Institute (INDAM) and the Italian National Institute for Nuclear Physics (INFN).";
 
-const About = () => {
+const About = ({ showSkills = true }) => {
   return (
     <section className="padding" id="about">
       <img className="background" src={image} alt={imageAltText} />
@@ -107,84 +107,88 @@ const About = () => {
           <div style={{
             padding: "3rem",
           }}>
-            <h3 style={{
-              color: "#0D3B66",
-              fontSize: "1.5rem",
-              marginTop: 0,
-              marginBottom: "1.5rem",
-              display: "flex",
-              alignItems: "center",
-              gap: "10px"
-            }}>
-              Skills & Expertise
-              <div style={{
-                height: "3px",
-                background: "#FAF0CA",
-                flex: 1,
-                borderRadius: "2px",
-                marginLeft: "10px"
-              }}></div>
-            </h3>
-            
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "30px",
-              marginBottom: "2.5rem"
-            }}>
-              {skillsList.map((skillGroup, groupIndex) => (
-                <div 
-                  key={groupIndex}
-                  style={{
-                    background: "#f8f8f8",
-                    borderRadius: "8px",
-                    padding: "1.5rem",
-                    border: "1px solid #eee"
-                  }}
-                >
-                  <h4 style={{
-                    color: "#0D3B66",
-                    marginTop: 0,
-                    marginBottom: "1rem",
-                    fontSize: "1.1rem"
-                  }}>
-                    {skillGroup.category}
-                  </h4>
-                  
+            {showSkills && (
+              <>
+                <h3 style={{
+                  color: "#0D3B66",
+                  fontSize: "1.5rem",
+                  marginTop: 0,
+                  marginBottom: "1.5rem",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px"
+                }}>
+                  Skills & Expertise
                   <div style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: "10px"
-                  }}>
-                    {skillGroup.skills.map((skill, skillIndex) => (
-                      <span
-                        key={skillIndex}
-                        style={{
-                          background: "white",
-                          color: "#0D3B66",
-                          padding: "6px 14px",
-                          borderRadius: "30px",
-                          fontSize: "0.9rem",
-                          border: "1px solid rgba(13, 59, 102, 0.2)",
-                          display: "inline-flex",
-                          alignItems: "center"
-                        }}
-                      >
-                        <span style={{
-                          display: "inline-block",
-                          width: "6px",
-                          height: "6px",
-                          borderRadius: "50%",
-                          background: "#0D3B66",
-                          marginRight: "8px"
-                        }}></span>
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                    height: "3px",
+                    background: "#FAF0CA",
+                    flex: 1,
+                    borderRadius: "2px",
+                    marginLeft: "10px"
+                  }}></div>
+                </h3>
+                
+                <div style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                  gap: "30px",
+                  marginBottom: "2.5rem"
+                }}>
+                  {skillsList.map((skillGroup, groupIndex) => (
+                    <div 
+                      key={groupIndex}
+                      style={{
+                        background: "#f8f8f8",
+                        borderRadius: "8px",
+                        padding: "1.5rem",
+                        border: "1px solid #eee"
+                      }}
+                    >
+                      <h4 style={{
+                        color: "#0D3B66",
+                        marginTop: 0,
+                        marginBottom: "1rem",
+                        fontSize: "1.1rem"
+                      }}>
+                        {skillGroup.category}
+                      </h4>
+                      
+                      <div style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        gap: "10px"
+                      }}>
+                        {skillGroup.skills.map((skill, skillIndex) => (
+                          <span
+                            key={skillIndex}
+                            style={{
+                              background: "white",
+                              color: "#0D3B66",
+                              padding: "6px 14px",
+                              borderRadius: "30px",
+                              fontSize: "0.9rem",
+                              border: "1px solid rgba(13, 59, 102, 0.2)",
+                              display: "inline-flex",
+                              alignItems: "center"
+                            }}
+                          >
+                            <span style={{
+                              display: "inline-block",
+                              width: "6px",
+                              height: "6px",
+                              borderRadius: "50%",
+                              background: "#0D3B66",
+                              marginRight: "8px"
+                            }}></span>
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </>
+            )}
             
             {/* Affiliations section */}
             <div style={{
@@ -192,7 +196,7 @@ const About = () => {
               padding: "1.5rem 2rem",
               borderRadius: "8px",
               borderLeft: "4px solid #FAF0CA",
-              marginTop: "2rem"
+              marginTop: showSkills ? "2rem" : 0
             }}>
               <div style={{
                 display: "flex",
@@ -227,7 +231,7 @@ const About = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         @media (max-width: 768px) {
           section.padding {
             padding: 3rem 0;
