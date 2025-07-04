@@ -20,6 +20,41 @@ const imageAltText = "white striped background";
  */
 const projectList = [
   {
+    title: "Neural learning rules from associative networks theory",
+    description:
+      "Paper published on Neurocomputing. It shows how to derive neural learning rules from the statistical mechanics of associative networks.",
+    url: "https://dx.doi.org/10.1016/j.neucom.2025.129865",
+    tags: ["Neural Learning", "Associative Networks", "Research Paper"],
+  },
+  {
+    title: "Learning in Associative Networks Through Pavlovian Dynamics",
+    description:
+      "Paper published on Neural Computation. It connects Hebbian and Pavlovian learning in associative networks.",
+    url: "https://dx.doi.org/10.1162/neco_a_01730",
+    tags: ["Pavlovian Learning", "Associative Networks", "Research Paper"],
+  },
+  {
+    title: "Inverse modeling of time-delayed interactions via the dynamic-entropy formalism",
+    description:
+      "Paper published on Physical Review E. It introduces a method for inverse modeling of systems with time-delayed interactions.",
+    url: "https://dx.doi.org/10.1103/physreve.110.024301",
+    tags: ["Inverse Modeling", "Time-Delayed Interactions", "Research Paper"],
+  },
+  {
+    title: "Dense Hebbian neural networks: A replica symmetric picture of supervised learning",
+    description:
+      "Paper published on Physica A. It provides a replica symmetric picture of supervised learning in dense Hebbian neural networks.",
+    url: "https://dx.doi.org/10.1016/j.physa.2023.129076",
+    tags: ["Supervised Learning", "Hebbian Networks", "Research Paper"],
+  },
+  {
+    title: "Dense Hebbian neural networks: A replica symmetric picture of unsupervised learning",
+    description:
+      "Paper published on Physica A. It provides a replica symmetric picture of unsupervised learning in dense Hebbian neural networks.",
+    url: "https://dx.doi.org/10.1016/j.physa.2023.129143",
+    tags: ["Unsupervised Learning", "Hebbian Networks", "Research Paper"],
+  },
+  {
     title: "Statistical mechanics of dense hebbian networks",
     description:
       "Paper published on the Journal of Physics A: Statistical Physics and its application. It discusses how high order interactions impact Hopfield networks.",
