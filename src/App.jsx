@@ -12,6 +12,7 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Portfolio from "./Components/Portfolio";
 import Education from "./Components/Education";
+import PhD from "./Components/PhD";
 import "./styles.css";
 
 // Create theme context for potential dark mode
@@ -152,8 +153,9 @@ const App = () => {
         <Header activeSection={activeSection} />
         <Home name={siteConfig.name} title={siteConfig.title} />
         <About />
-        <Portfolio />
         <Education />
+        <PhD />
+        <Portfolio />
         <Footer 
           {...siteConfig} 
           primaryColor={siteConfig.colors.primary} 
