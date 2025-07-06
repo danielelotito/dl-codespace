@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /**
  * Portfolio component
  *
@@ -7,11 +8,6 @@
 
 import React, { useState } from "react";
 
-/**
- * Background image for the portfolio section
- */
-import image from "../images/white2.jpg";
-const imageAltText = "white striped background";
 
 /**
  * Project list

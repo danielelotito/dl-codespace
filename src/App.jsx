@@ -9,7 +9,6 @@ import About from "./Components/About";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
-import Publications from "./Components/Publications";
 import Portfolio from "./Components/Portfolio";
 import Education from "./Components/Education";
 import PhD from "./Components/PhD";
@@ -73,7 +72,7 @@ const App = () => {
   // Monitor scroll position to update active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "publications", "portfolio","education", "footer"];
+      const sections = ["home", "about", "publications", "portfolio", "education", "phd", "footer"];
       const scrollPosition = window.scrollY + 100; // Offset for header
       
       for (const section of sections) {
@@ -98,7 +97,7 @@ const App = () => {
 
   // Function to toggle dark/light theme (functionality to be implemented later)
   const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === "light" ? "dark" : "light");
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   // Loading screen
@@ -159,6 +158,8 @@ const App = () => {
         <Home name={siteConfig.name} title={siteConfig.title} />
         <About />
         <Portfolio />
+        <Education />
+        <PhD />
         <Footer 
           {...siteConfig} 
           primaryColor={siteConfig.colors.primary} 
