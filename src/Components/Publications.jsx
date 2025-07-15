@@ -58,12 +58,12 @@ const Publications = () => {
     {
       title: "Neural Learning Rules from Associative Networks Theory",
       authors: "D. Lotito",
-      journal: "Currently Under Review",
-      volume: "",
+      journal: "Neurocomputing",
+      volume: "636",
       year: "2025",
-      pages: "",
-      doi: "",
-      url: "",
+      pages: "129865",
+      doi: "10.1016/j.neucom.2025.129865",
+      url: "https://doi.org/10.1016/j.neucom.2025.129865",
       categories: ["Neural Learning", "Dynamical Systems", "Associative Networks", "Preprint"]
     }
   ];
