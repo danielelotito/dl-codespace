@@ -24,8 +24,8 @@ export const ThemeContext = createContext();
 const siteConfig = {
   // Personal information
   name: "Daniele Lotito",
-  title: "Theoretical Physicist, PhD in AI",
-  email: "daniele.lotito@phd.unipi",
+  title: "Research Scientist @ IBM Research, PhD in AI",
+  email: "daniele.lotito[at]ibm[d0t]com",
   gitHub: "danielelotito",
   linkedIn: "daniele-lotito",
   
