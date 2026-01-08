@@ -16,7 +16,7 @@ const imageAltText = "Graph with sky blue background and white at the center";
  * Description that expands on your title on the Home component.
  */
 const description =
-  "I'm a PhD candidate in AI at University of Pisa.\n\nI am specialized in applying statistical physics and statistical learning theory to machine learning. .\n\nI am also interested in the application of high dimensional statistics to the analysis of the dynamics of complex systems such as biological systems and the stock market. \n\n My work lies at the intersection of theoretical physics, statistics, and machine learning, with hands-on experience in large machine learning models.";
+  "I'm a Research Scientist at IBM Research Europe, I hold a PhD in AI from the University of Pisa.\n\nI am specialized in applying statistical physics and statistical learning theory to machine learning. .\n\nI am also interested in the application of high dimensional statistics to the analysis of the dynamics of complex systems such as biological systems and the stocks market. \n\n My work lies at the intersection of theoretical physics, statistics, and machine learning, with hands-on experience in large machine learning models.";
 
 /**
  * List of skills or technologies you work on or are passionate about
@@ -24,7 +24,7 @@ const description =
 const skillsList = [
   {
     category: "Programming Languages",
-    skills: ["Python", "R", "Julia", "LaTeX"]
+    skills: ["Python", "Julia", "LaTeX"]
   },
   {
     category: "Machine Learning",
@@ -32,7 +32,7 @@ const skillsList = [
   },
   {
     category: "Research Areas",
-    skills: ["Feed-forward neural networks", "Statistical physics", "Statistical learning theory", "Attention based models"]
+    skills: [ "High Dimensional Statistics", "Statistical learning theory", "Low Sample Size Regime", "Auto ML", "AI for Scientific Discovery", "Feed-forward neural networks", "Statistical physics", "Attention based models"]
   },
   {
     category: "Tools & Practices",
