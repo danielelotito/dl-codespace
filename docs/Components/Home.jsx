@@ -6,13 +6,15 @@
  */
 
 import React, { useEffect, useState } from "react";
-import arrowSvg from "../images/down-arrow.svg";
 import PropTypes from "prop-types";
 
 /**
  * Home background image
- */
-import image from "../images/DanieleLotito.jpeg";
+*/
+// import arrowSvg from "../images/down-arrow.svg";
+// import image from "../images/DanieleLotito.jpeg";
+const image = new URL("../images/DanieleLotito.jpeg", import.meta.url )
+const arrowSvg = new URL("../images/down-arrow.svg", import.meta.url )
 const imageAltText = "Daniele Lotito profile picture";
 
 const Home = ({ name, title }) => {
