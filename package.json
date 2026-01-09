@@ -2,7 +2,7 @@
   "name": "educator-js-codespace-template",
   "version": "1.0.0",
   "description": "Educator JS Codespace Template",
-  "source": "src/index.html",
+  "source": "docs/index.html",
   "homepage": "https://danielelotito.github.io/dl-codespace",
   "scripts": {
     "start": "parcel",
@@ -32,7 +32,7 @@
     "eslint-plugin-react": "^7.31.7",
     "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
-    "parcel": "^2.7.0",
+    "parcel": "^2.16.3",
     "prettier": "^2.7.1",
     "process": "^0.11.10"
   }
