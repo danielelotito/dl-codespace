@@ -9,7 +9,7 @@ import React from "react";
 /**
  * About background image
  */
-import image from "../images/background-graph-skyblue-whiteatthecenter.jpg";
+const image = new URL("../images/background-graph-skyblue-whiteatthecenter.jpg", import.meta.url)
 const imageAltText = "Graph with sky blue background and white at the center";
 
 /**

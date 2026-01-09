@@ -8,14 +8,14 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Social media icons
-import devDotToIcon from "../images/socials/devdotto.svg";
-import envelopeIcon from "../images/socials/envelope.svg";
-import gitHubIcon from "../images/socials/github.svg";
-import instagramIcon from "../images/socials/instagram.svg";
-import linkedInIcon from "../images/socials/linkedin.svg";
-import mediumIcon from "../images/socials/medium.svg";
-import twitterIcon from "../images/socials/twitter.svg";
-import youTubeIcon from "../images/socials/youtube.svg";
+const devDotToIcon = new URL("../images/socials/devdotto.svg", import.meta.url);
+const envelopeIcon = new URL("../images/socials/envelope.svg", import.meta.url);
+const gitHubIcon = new URL("../images/socials/github.svg", import.meta.url);
+const instagramIcon = new URL("../images/socials/instagram.svg", import.meta.url);
+const linkedInIcon = new URL("../images/socials/linkedin.svg", import.meta.url);
+const mediumIcon = new URL("../images/socials/medium.svg", import.meta.url);
+const twitterIcon = new URL("../images/socials/twitter.svg", import.meta.url);
+const youTubeIcon = new URL("../images/socials/youtube.svg", import.meta.url);
 
 const Footer = (props) => {
   const {
