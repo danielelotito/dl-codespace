@@ -159,7 +159,7 @@ const Footer = (props) => {
             marginBottom: "2rem",
             lineHeight: 1.6,
           }}>
-            Interested in collaborating on research or have questions about my work in statistical physics and AI? 
+            Interested in collaborating on research or have questions about my work in AI? 
             Feel free to reach out through any of the channels below.
           </p>
         </div>
