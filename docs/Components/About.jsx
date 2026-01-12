@@ -32,11 +32,11 @@ const skillsList = [
   },
   {
     category: "Python libraries for AI",
-    skills: ["Python Standard Library", "Pytorch", "Scikit-learn", "Autogluon", "Pandas", "Langchain", "Numpy", "ado-core (IBM)"]
+    skills: ["Python Standard Library", "Pytorch", "Scikit-learn", "Autogluon", "Pandas", "Langchain", "Numpy", "ado-core (IBM)", "hydra"]
   },
   {
     category: "Software Ecosystem",
-    skills: ["Git",  "Ollama", "OpenML", "Hugging Face", "Many other AI tools"]
+    skills: ["Git", "uv",  "Ollama", "OpenML", "Hugging Face", "Many other AI tools"]
   },
 ];
 
