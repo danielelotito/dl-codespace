@@ -30,7 +30,7 @@ const projectList = [
   {
     title: "Neural Learning Rules From Associative Networks Theory",
     description:
-      "Single authot paper published on Neurocomputing. It shows how to derive neural learning rules from the statistical mechanics of associative networks.",
+      "Single author paper published on Neurocomputing. It shows how to derive neural learning rules from the statistical mechanics of associative networks.",
     url: "https://dx.doi.org/10.1016/j.neucom.2025.129865",
     tags: ["Neural Learning", "Associative Networks", "Research Paper"],
   },
