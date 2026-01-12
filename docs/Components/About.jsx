@@ -22,21 +22,21 @@ const description =
  * List of skills or technologies you work on or are passionate about
  */
 const skillsList = [
-  {
-    category: "Programming Languages",
-    skills: ["Python", "LaTeX", "Julia",]
-  },
-  {
-    category: "Machine Learning",
-    skills: ["Pytorch", "Tensorflow", "Scikit-learn", "Autogluon", "Pandas", "Ray"]
-  },
+  // {
+  //   category: "Programming Languages",
+  //   skills: ["Python", "LaTeX", "Julia",]
+  // },
   {
     category: "Research Areas",
-    skills: [ "High Dimensional Statistics", "Statistical learning theory", "Low Sample Size Statistics", "Auto ML", "AI for Scientific Discovery", "Feed-forward neural networks", "Statistical physics", "Attention-based models", "Sampling algorithms"]
+    skills: [ "High Dimensional Statistics", "Statistical Learning Theory", "Low Sample Size Statistics",  "Sampling algorithms", "Auto ML",  "AI for Scientific Discovery", "Feed-forward neural networks", "Statistical mechanics", "Maximum Entropy Methods", "Attention-based models", "Data Visualization"]
   },
   {
-    category: "Tools & Practices",
-    skills: ["Git", "Data Visualization", "Scientific Research", "Academic Publishing", "Reproducible Science"]
+    category: "Python libraries for AI",
+    skills: ["Python Standard Library", "Pytorch", "Scikit-learn", "Autogluon", "Pandas", "Langchain", "Numpy", "ado-core (IBM)"]
+  },
+  {
+    category: "Software Ecosystem",
+    skills: ["Git",  "Ollama", "OpenML", "Hugging Face", "Many other AI tools"]
   },
 ];
 
