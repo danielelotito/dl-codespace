@@ -72,7 +72,7 @@ const App = () => {
   // Monitor scroll position to update active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "publications", "portfolio", "education", "phd", "footer"];
+      const sections = ["home", "about", "portfolio", "education", "phd", "footer"];
       const scrollPosition = window.scrollY + 100; // Offset for header
       
       for (const section of sections) {
