@@ -15,60 +15,52 @@ import React, { useState } from "react";
  * An array of objects that will be used to display project links
  */
 const projectList = [
+    {
+    title: "My Google Scholar profile",
+    description: "Check out my Google Scholar profile to see all my publications.",
+    url: "https://scholar.google.com/citations?user=hbCDbioAAAAJ&hl=en",
+    tags: ["Academic Profile", "Publications", "Research Impact"]
+  },
+      {
+    title: "My Github profile",
+    description: "Check out my Github profile to see all my projects.",
+    url: "https://github.com/danielelotito",
+    tags: ["Software", "Open-Source", "Programming"]
+  },
   {
-    title: "Neural learning rules from associative networks theory",
+    title: "Neural Learning Rules From Associative Networks Theory",
     description:
-      "Paper published on Neurocomputing. It shows how to derive neural learning rules from the statistical mechanics of associative networks.",
+      "Single authot paper published on Neurocomputing. It shows how to derive neural learning rules from the statistical mechanics of associative networks.",
     url: "https://dx.doi.org/10.1016/j.neucom.2025.129865",
     tags: ["Neural Learning", "Associative Networks", "Research Paper"],
   },
   {
     title: "Learning in Associative Networks Through Pavlovian Dynamics",
     description:
-      "Paper published on Neural Computation. It connects Hebbian and Pavlovian learning in associative networks.",
+      "First-authored Paper published on Neural Computation. It connects Hebbian and Pavlovian learning in associative networks.",
     url: "https://dx.doi.org/10.1162/neco_a_01730",
     tags: ["Pavlovian Learning", "Associative Networks", "Research Paper"],
   },
   {
     title: "Inverse modeling of time-delayed interactions via the dynamic-entropy formalism",
     description:
-      "Paper published on Physical Review E. It introduces a method for inverse modeling of systems with time-delayed interactions.",
+      "Paper published on Physical Review E (equal contribution). It introduces a method for inverse modeling of systems with time-delayed interactions.",
     url: "https://dx.doi.org/10.1103/physreve.110.024301",
     tags: ["Inverse Modeling", "Time-Delayed Interactions", "Research Paper"],
   },
   {
     title: "Dense Hebbian neural networks: A replica symmetric picture of supervised learning",
     description:
-      "Paper published on Physica A. It provides a replica symmetric picture of supervised learning in dense Hebbian neural networks.",
+      "Paper published on Physica A (equal contribution). It provides a replica symmetric picture of supervised learning in dense Hebbian neural networks.",
     url: "https://dx.doi.org/10.1016/j.physa.2023.129076",
     tags: ["Supervised Learning", "Hebbian Networks", "Research Paper"],
   },
   {
     title: "Dense Hebbian neural networks: A replica symmetric picture of unsupervised learning",
     description:
-      "Paper published on Physica A. It provides a replica symmetric picture of unsupervised learning in dense Hebbian neural networks.",
+      "Paper published on Physica A (equal contribution). It provides a replica symmetric picture of unsupervised learning in dense Hebbian neural networks.",
     url: "https://dx.doi.org/10.1016/j.physa.2023.129143",
     tags: ["Unsupervised Learning", "Hebbian Networks", "Research Paper"],
-  },
-  {
-    title: "Statistical mechanics of dense hebbian networks",
-    description:
-      "Paper published on the Journal of Physics A: Statistical Physics and its application. It discusses how high order interactions impact Hopfield networks.",
-    url: "https://www.sciencedirect.com/science/article/abs/pii/S0378437123006313",
-    tags: ["Statistical Physics", "Hopfield Networks", "Research Paper"]
-  },
-  {
-    title: "Training dense hebbian networks with no supervision",
-    description:
-    "Paper published on the Journal of Physics A: Statistical Physics and its application. Here we develop a framework that allows to learn with a dense hebbian network in the unsupervised setting.",
-    url: "https://www.sciencedirect.com/science/article/abs/pii/S0378437123006982",
-    tags: ["Unsupervised Learning", "Hebbian Networks", "Research Paper"]
-  },
-  {
-    title: "My Google Scholar profile",
-    description: "Check out my Google Scholar profile to see my publications.",
-    url: "https://scholar.google.com/citations?user=hbCDbioAAAAJ&hl=en",
-    tags: ["Academic Profile", "Publications", "Research Impact"]
   },
   {
     title: "Explaining complex systems to a broad audience in italian",
